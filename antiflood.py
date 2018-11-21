@@ -1,13 +1,9 @@
 import telepot
 from threading import Thread, Timer
 import time
+from antiflood_config import token, settings
 
-token = "your-token"
 data = [] #stores data
-settings = {
-    'antiflood_seconds':1.5,
-    'antiflood_max_msgs':3
-}
 
 def delMsg(chat_id, msg_id):
     """
