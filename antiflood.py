@@ -20,7 +20,7 @@ def delMsg(chat_id, msg_id):
 
 def antiflood(user_id, chat_id):
     """
-    the antiflood function which starts every 1.5 seconds (see dict in line 7)
+    the antiflood function which starts every x seconds
 
     Args:
         chat_id: mentioned to see where are the messages coming from
@@ -29,15 +29,15 @@ def antiflood(user_id, chat_id):
     Purpose:
         this antiflood function works by enumerating the data and counting how
         many times the specified user from the specified chat sent specific amount of messages
-        and if it goes above the max allowed messages, it bans the user
+        and if it goes above the max allowed messages every x seconds, it bans the user
     
     Pseudo code example:
         x = user id
         y = chat id
-        if 1 second passes and count of y+x is bigger than 3:
+        if x second passes and the count of the messages of the user x in the group y is bigger than 3:
             bans user
             clears data
-        else if count of y+x is less than 3:
+        else if count of user x in chat y is less than 3:
             clears data
 
     """
